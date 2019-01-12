@@ -18,7 +18,7 @@
     },
     {
       "from": "fc1baf72-40c2-47fa-9461-e3eff88bc54b",
-      "to": "759f7e8"
+      "to": "1708f369-8212-4447-b785-63ba2324be61"
     }
   ],
   "nodes": [
@@ -63,7 +63,7 @@
           "name": "template",
           "output": false,
           "outputPort": false,
-          "value": "'sub-01/anat/sub-01_T1w.nii.gz'",
+          "value": "'sub-01/(anat|func)/sub-01_(.*run-0?1_bold|T1w).nii.gz'",
           "visible": true,
           "iterator": false
         },
@@ -705,19 +705,6 @@
       ],
       "ports": [
         {
-          "base": "BET_results",
-          "editable": true,
-          "id": "fe58d2a8-3af8-4810-a6bc-1ffc2ca68abc",
-          "input": true,
-          "inputPort": "759f7e8",
-          "name": "BET_results",
-          "output": false,
-          "outputPort": false,
-          "value": "",
-          "visible": true,
-          "iterator": false
-        },
-        {
           "base": "base_directory",
           "editable": true,
           "id": "e08b4e07-5d99-418e-b7f5-ced49b808332",
@@ -897,6 +884,19 @@
           "outputPort": "75ab4a8",
           "value": "",
           "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "registered",
+          "editable": true,
+          "id": "3cf85a49-af06-48f4-bb2b-82c24e02fa26",
+          "input": true,
+          "inputPort": "1708f369-8212-4447-b785-63ba2324be61",
+          "name": "registered",
+          "output": true,
+          "outputPort": "779c32c9-ab5b-400e-b6e8-03f2ae0749f1",
+          "value": "",
+          "visible": true,
           "iterator": false
         }
       ],
